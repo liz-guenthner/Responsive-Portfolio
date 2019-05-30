@@ -57,50 +57,47 @@ body {
     width:100%;
     background-image: url('../images/what-the-hex.png');
     background-repeat: repeat;
-    display: flex;
-    flex-direction: column;
 }
 .container {
     padding:0;
     margin-bottom:100px;
+    width: 100%;
 }
 .navbar {
+    position:relative;
     padding:0;
     width: 100%;
     margin:0;
     border-bottom: 2px solid #dddddd;
+    background-color: #fff;
+    clear: both;
+    overflow: hidden;
 }
 .navbar-brand {
     float:left;
     font-family: Georgia, Times, Times New Roman, serif;
     background-color: #4aaaa5;
-    padding: 25px;
+    padding: 25px 0;
     text-align: center;
-    font-size: 15px;
     font-weight: bold;
     font-size: 1.4em;
     margin:0;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-brand:hover {
     color:#fff;
+    width: 100%;
+}
+.nav-container {
+    width:100%;
+    overflow: hidden;
+    clear: both;
 }
 .navbar-nav {
- flex-direction:row;
- float:none;
- padding: 15px 0;
- width: 200px;
- margin: 0 auto;
+    padding: 15px 0;
+    overflow: hidden;
+    clear: both;
+    width: 210px;
+    margin: 0 auto;
 }
 
-nav ul {
-    list-style-type: none;
-    overflow: hidden;
-    clear:both;
-    float:right;
-    margin:0;
-}
 nav li {
     float:left;
     padding: 0 10px;
@@ -109,10 +106,15 @@ nav li {
 nav li.border-right{
     border-right: 2px solid #cccccc;
 }
-
+nav li.active a {
+    color: #000;
+}
 a {
     color: #777;
     text-decoration: none;
+}
+nav li a:hover {
+    text-decoration:underline;
 }
 #main-content {
     display: block;
@@ -171,6 +173,7 @@ textarea {
     color: #fff;
     padding:12px 0;
     font-size:15px;
+    cursor:pointer;
 }
 .gallery {
     margin: 20px 20px;
@@ -211,20 +214,16 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-    .navbar-nav {
-        flex-direction:row;
-        float:right;
-        padding: 15px 0;
-        margin: 0;
-        vertical-align:middle;
+    .navbar-brand {
+        width: 25%;
     }
-    #main-content {
-        margin: 20px 0;
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
     }
-}
-
-@media only screen and (min-width: 992px) {
     .navbar-nav {
-        width: 255px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
     }
 }
