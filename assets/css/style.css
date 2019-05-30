@@ -246,4 +246,7 @@ footer {
     .asset-block.right img {
         padding-left: 20px;
     }
+    .asset-block.right .ribbon {
+        left: 20px;
+    }
 }
