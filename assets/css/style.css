@@ -163,10 +163,10 @@ input, textarea {
 }
 input[type=text],
 textarea {
-    box-sizing : border-box;
-}
-textarea {
-    border-color: #cccccc;
+    box-sizing: border-box;
+    border-color: #dddddd;
+    border-width: 1px;
+    border-style: groove;
 }
 .submit-button {
     width: 100px;
